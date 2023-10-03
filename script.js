@@ -23,8 +23,9 @@ document.getElementById("email-form").addEventListener("submit", async (e) => {
 
   // Add error handling for the fetch request
   try {
-    const response = await fetch("http://localhost:3000/api/v1/contact/book", {
+    const response = await fetch("http://localhost:3000/sendEmail", {
       method: "POST",
+      mode: "cors",
       headers: {
         "Content-Type": "application/json",
       },
